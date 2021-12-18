@@ -7,8 +7,12 @@ import (
 )
 
 func (app *application) router() *mux.Router {
+	//fetch static files
+	fileServer := http.FileServer(http.Dir("C:/Users/P. Zion/go/src/notebin/ui/static"))
 	mux := mux.NewRouter()
+
 	mux.HandleFunc("/index", app.index)
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+	mux.PathPrefix("/static/").Handler(http.StripPrefix("/static/", fileServer))
+	http.Handle("/", mux)
 	return mux
 }
