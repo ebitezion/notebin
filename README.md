@@ -2,7 +2,7 @@
 <p><strong>Notebin</strong> is a simple repository for storing and retrieving ideas. It follows a simple MVC architecture.</p>
 
 # Goals
-The project was simply to quickly demonstate the following:
+The project is simply to quickly demonstate the following:
 <li>How to Setup a project repository which follows the idiomatic GO.</li>
 <li>Start a web server and listen for incoming HTTP requests.</li>
 <li>Route requests to different handlers based on the request path.</li>
